@@ -5,14 +5,13 @@ const initialState = [];
 export default function todoApp(state = initialState, action){
     switch(action.type){
         case ADD_TODO:
-            return [
-                ...state,
+            return state.concat({
                 {
                     id: action.id,
                     text: action.text,
                     done: false
                 }
-            ]
+            }); 
         break;
         case TOGGLE_TODO:
             state.index;                    
